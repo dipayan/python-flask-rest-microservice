@@ -33,7 +33,7 @@ class TodoTest(unittest.TestCase):
     res = self.client().post('/api/v1/todos/', headers={'Content-Type': 'application/json'}, data=json.dumps(self.todos))
     self.assertEqual(res.status_code, 201)
     json_data = json.loads(res.data)
-    res = self.client().get('/api/v1/todos/' + json_data.get('todo_id') , headers={'Content-Type': 'application/json'})
+    res = self.client().get('/api/v1/todos/' + json_data.get('id') , headers={'Content-Type': 'application/json'})
     json_data = json.loads(res.data)
     self.assertEqual(res.status_code, 200)
     self.assertEqual(json_data.get('title'), 'my first test todo')
@@ -46,7 +46,7 @@ class TodoTest(unittest.TestCase):
     res = self.client().post('/api/v1/todos/', headers={'Content-Type': 'application/json'}, data=json.dumps(self.todos))
     self.assertEqual(res.status_code, 201)
     json_data = json.loads(res.data)    
-    res = self.client().put('/api/v1/todos/' + json_data.get('todo_id'), headers={'Content-Type': 'application/json'}, data=json.dumps(todo1))
+    res = self.client().put('/api/v1/todos/' + json_data.get('id'), headers={'Content-Type': 'application/json'}, data=json.dumps(todo1))
     json_data = json.loads(res.data)
     self.assertEqual(res.status_code, 200)
     self.assertEqual(json_data.get('title'), 'Update my test case')
@@ -56,7 +56,7 @@ class TodoTest(unittest.TestCase):
     res = self.client().post('/api/v1/todos/', headers={'Content-Type': 'application/json'}, data=json.dumps(self.todos))
     self.assertEqual(res.status_code, 201)
     json_data = json.loads(res.data)
-    res = self.client().delete('/api/v1/todos/' + json_data.get('todo_id') , headers={'Content-Type': 'application/json'})
+    res = self.client().delete('/api/v1/todos/' + json_data.get('id') , headers={'Content-Type': 'application/json'})
     self.assertEqual(res.status_code, 204)
     
   def tearDown(self):
