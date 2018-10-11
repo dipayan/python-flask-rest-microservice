@@ -25,7 +25,7 @@ REST API written in Python Flask using SQLAlchemy as the ORM with auto migration
   # Change into the directory
   cd python-flask-rest-microservice
   # Install all required dependencies with
-  pipenv install --deploy
+  pipenv install --deploy --skip-lock
   # Activate the project virtual environment
   pipenv shell
   # Create an local .env file and replace with the relevant values
