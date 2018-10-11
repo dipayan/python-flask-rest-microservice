@@ -21,11 +21,11 @@ REST API written in Python Flask using SQLAlchemy as the ORM with auto migration
 
   ```bash
   # Clone the repository 
-  git clone https://github.com/dipayan/python-flask-rest-microservice.git`
+  git clone https://github.com/dipayan/python-flask-rest-microservice.git
   # Change into the directory
-  cd python-flask-rest-microservice`
+  cd python-flask-rest-microservice
   # Install all required dependencies with
-  pipenv install --system --deploy
+  pipenv install --deploy
   # Activate the project virtual environment
   pipenv shell
   # Create an local .env file and replace with the relevant values
