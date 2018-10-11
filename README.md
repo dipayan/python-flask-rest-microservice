@@ -61,7 +61,7 @@ REST API written in Python Flask using SQLAlchemy as the ORM with auto migration
 
 **Example**
 Get all todos
-curl http://localhost:{PORT}/api/v1/todos
+curl http://localhost:{PORT}/api/v1/todos/
 
 ## Running the application as a Docker container
 
