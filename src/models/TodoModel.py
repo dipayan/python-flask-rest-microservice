@@ -37,7 +37,9 @@ class TodoModel(db.Model):
     db.session.commit()
   
   @staticmethod
-  def get_all_todos():
+  def get_all_todos(all_args):
+    if 'title' in all_args:
+      return TodoModel.query.filter(TodoModel.title == all_args.get('title'))
     return TodoModel.query.all()
   
   @staticmethod

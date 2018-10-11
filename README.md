@@ -52,9 +52,10 @@ REST API written in Python Flask using SQLAlchemy as the ORM with auto migration
 ## Usage
 
 **API Specifications**
-  - GET: /api/v1/todos
+  - GET: /api/v1/todos/
+  - GET: /api/v1/todos/?title= 
   - GET: /api/v1/todos/{todo_id}
-  - POST: /api/v1/todos
+  - POST: /api/v1/todos/
   - PUT: /api/v1/todos/{todo_id}
   - DELETE: /api/v1/todos/{todo_id}
 

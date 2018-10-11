@@ -25,8 +25,9 @@ def get_all():
   """
   Get All Todos
   """
-  posts = TodoModel.get_all_todos()
-  data = todo_schema.dump(posts, many=True).data
+  all_args = request.args
+  todos = TodoModel.get_all_todos(all_args)
+  data = todo_schema.dump(todos, many=True).data
   return custom_response(data, 200)
 
 @todo_api.route('/<int:todo_id>', methods=['GET'])
